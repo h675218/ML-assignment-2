@@ -10,8 +10,11 @@ Ved kjøring av main.py skjer følgende:
 - Oppnåelse av over 95% nøyaktighet på testsettet.
 
 # Hvordan kjøre
+0. Video og prosjektrapport ligger som:
+   Interaksjonsvideo Hockey-vs-Tennis.mov
+   Prosjektrapport ML2 Assignment.pdf
 
-1.
+2. 
 cd HOCKEY-VS-TENNIS-CNN
 
 python -m venv .venv
