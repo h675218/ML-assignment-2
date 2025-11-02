@@ -13,9 +13,13 @@ Ved kjøring av main.py skjer følgende:
 
 1.
 cd HOCKEY-VS-TENNIS-CNN
+
 python -m venv .venv
+
 source .venv/bin/activate     # (Mac/Linux)
+
 # .venv\Scripts\activate      # (Windows)
+
 pip install -r requirements.txt
 
 2.
