@@ -1,5 +1,5 @@
 # Convolutional Neural Network Project (Hockey vs Tennis)
-Prosjektet ble utviklet for å lære å anvende maskinlæring utover undervisningen på studiet. Prosjektet ga en dypere forståelse av hvordan man jobber med bildeklassifisering, datasett, dataforbehandling og Convolutional Neural Networks (CNN) ved hjelp av Python og TensorFlow/Keras. I tillegg til å være et spennende prosjekt, var det gøy å koble idretter jeg driver med, og har drevet med gjennom hele livet, med programmering for å se hvordan kunstig intelligens kan skille bilder med høy nøyaktighet.
+Prosjektet ble utviklet for å lære å anvende maskinlæring utover undervisningen på studiet. Videre ble det også utviklet lengre i obligatorisk innlevering for å håndtere brukerinput. Prosjektet ga en dypere forståelse av hvordan man jobber med bildeklassifisering, datasett, dataforbehandling og Convolutional Neural Networks (CNN) ved hjelp av Python, TensorFlow/Keras og FastAPI. I tillegg til å være et spennende prosjekt, var det gøy å koble idretter jeg driver med, og har drevet med gjennom hele livet, med programmering for å se hvordan kunstig intelligens kan skille bilder med høy nøyaktighet.
 
 # Funksjonalitet
 Ved kjøring av main.py skjer følgende:
