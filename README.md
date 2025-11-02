@@ -44,15 +44,15 @@ Webappen starter på http://localhost:8080
 
 # Mappestruktur
 
-**app/main/** -
+**app/main/** - Inneholder main som definerer FastAPI for prediksjon. Den trente modellen lastes inn og tar imot bildeinput. 
 
 **data/** – Inneholder mapper for train/ og test/ med hockeybilder og tennisbilder. Ca 80% i train og 20% i test.
 
-**models/** - 
+**models/** - Lagrer trent modell model.h5 og etikettene labels.json som brukes til prediksjonen.
 
 **images/** – Lagrede grafer fra treningsutførelse.
 
-**webapp/cnnweb/src/** - 
+**webapp/cnnweb/src/** - Java Spring-frontend som lar brukeren laste opp bilder via webgrensesnittet. Inneholder kontrolleren PredictController.java og kjørbar applikasjons CnnWebApplication.java.
 
 **main.py** – Hovedfilen som håndterer lasting av data, modelltrening og evaluering.
 
