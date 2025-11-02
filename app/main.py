@@ -2,7 +2,7 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from PIL import Image
 import io, json, numpy as np, tensorflow as tf
 
-app = FastAPI(title="Sports Image Classifier")
+app = FastAPI(title="Sports Image Klassifisering")
 model = tf.keras.models.load_model("models/model.h5")
 labels = json.load(open("models/labels.json"))
 IMG_SIZE = (128, 128)
