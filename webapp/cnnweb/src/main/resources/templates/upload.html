@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="no" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title>Hockey vs Tennis</title>
+  <style>
+    body{font-family:system-ui;margin:40px;max-width:960px}
+    .card{border:1px solid #e3e3e3;border-radius:12px;padding:16px;margin-bottom:16px}
+    button{padding:6px 12px;border-radius:8px;border:1px solid #ccc;background:#f7f7f7;cursor:pointer}
+    input[type=file]{padding:6px 8px;border:1px solid #ddd;border-radius:8px}
+  </style>
+</head>
+<body>
+  <h1>Hockey vs Tennis</h1>
+
+  <div class="card">
+    <form method="post" action="/predict" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*" required>
+      <button type="submit">Klassifiser</button>
+    </form>
+  </div>
+
+  <div class="card" th:if="${message}">
+    <strong th:text="${message}"></strong>
+  </div>
+
+  <div class="card">
+    <h3>Treningskurve</h3>
+    <img src="/images/training_accuracy.png" width="480" alt="Training accuracy">
+  </div>
+</body>
+</html>

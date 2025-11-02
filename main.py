@@ -67,4 +67,16 @@ plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.legend()
 plt.savefig('images/training_accuracy.png')
+#plt.show()
+
+# --- Save model + labels ---
+import os, json
+os.makedirs("models", exist_ok=True)
+model.save("models/model.h5")
+labels = [None]*len(train_ds.class_indices)
+for name, idx in train_ds.class_indices.items():
+    labels[idx]=name
+with open("models/labels.json","w") as f: json.dump(labels,f)
+print("Saved models/model.h5 and models/labels.json")
+
 plt.show()
