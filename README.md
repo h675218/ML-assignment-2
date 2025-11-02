@@ -9,10 +9,64 @@ Ved kjøring av main.py skjer følgende:
 - Visualiserer graf med matplotlib.
 - Oppnåelse av over 95% nøyaktighet på testsettet.
 
+# Hvordan kjøre
+
+1.
+cd HOCKEY-VS-TENNIS-CNN
+python -m venv .venv
+source .venv/bin/activate     # (Mac/Linux)
+# .venv\Scripts\activate      # (Windows)
+pip install -r requirements.txt
+
+2.
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+
+3.
+cd webapp/cnnweb
+mvn spring-boot:run
+
+4.
+Webappen starter på http://localhost:8080
+
+# Bruk
+1. Åpne nettleseren på http://localhost:8080
+
+2. Last opp et bilde av enten ishockey eller tennis
+
+3. Trykk på Klassifiser
+
 # Mappestruktur
+
+HOCKEY-VS-TENNIS-CNN/
+├── app/                     # FastAPI-app som kjører prediksjonen
+│   └── main.py
+├── data/                    # Treningsdata og testdata
+├── models/                  # Lagret modell
+│   ├── model.h5
+│   └── labels.json
+├── images/                  # Treningskurver og visualiseringer
+│   └── training_accuracy.png
+├── webapp/cnnweb/           # Spring Boot-prosjektet
+│   ├── src/
+│   │   |- main/java/com/example/controller/PredictController.java
+│   │   └── main/resources/
+│   │       ├── templates/
+│   │       │   └── upload.html
+│   │       └── application.properties
+│   └── pom.xml
+├── requirements.txt         # Python-avhengigheter
+├── README.md
+└── LICENSE
+
+**app/main/** -
+
 **data/** – Inneholder mapper for train/ og test/ med hockeybilder og tennisbilder. Ca 80% i train og 20% i test.
 
-**images/** – Lagrede grafer fra utførelse.
+**models/** - 
+
+**images/** – Lagrede grafer fra treningsutførelse.
+
+**webapp/cnnweb/src/** - 
 
 **main.py** – Hovedfilen som håndterer lasting av data, modelltrening og evaluering.
 
