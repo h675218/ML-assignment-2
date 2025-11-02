@@ -6,7 +6,7 @@ Ved kjøring av main.py skjer følgende:
 - Laster inn 1300+ forskjellige hockeybilder og tennisbilder fra mapper organisert i train/ og test/
 - Utfører bildebehandling og dataforstørrelse (augmentation) med ImageDataGenerator
 - Trener et Convolutional Neural Network (CNN) for å skille bildene.
-- Visualiserer graf med matplotlib.
+- Starter en webapplikasjon for at en bruker selv skal kunne opplaste et bilde og skille mellom tennis og ishockey.
 - Oppnåelse av over 95% nøyaktighet på testsettet.
 
 # Hvordan kjøre
